@@ -53,5 +53,5 @@ func TestElasticBounded(t *testing.T) {
 		assert.NoError(t, err)
 	}
 	wg.Wait()
-	assert.Less(t, int64(time.Since(start)), int64(20*time.Millisecond), "bad result")
+	assert.Less(t, int64(time.Since(start)), int64(total*10*time.Millisecond), "bad result")
 }
